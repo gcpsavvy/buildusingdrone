@@ -9,8 +9,8 @@ steps:
     # registry: docker.io
     repo: bheemappam/droneinhub
     username:
-      from_secret: bheemappam
+      from_secret: docker_username
     password:
-      from_secret: J@nu@ry2023
+      from_secret: docker_password
     tags: 
       - latest
