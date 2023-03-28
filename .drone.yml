@@ -1,19 +1,16 @@
----
 kind: pipeline
 type: docker
-name: default
-
-# remove this section if your CPU is amd64
-#platform:
-#  os: linux
-#  arch: arm64
+name: hello-world
 
 steps:
-- name: hello
-  image: busybox
-  commands:
-  - echo Hello Green Apple
- 
-trigger:
-  branch:
-  - main
+- name: docker  
+  image: plugins/docker
+  settings:
+    # registry: docker.io
+    repo: bheemappam/droneinhub
+    username:
+      from_secret: bheemappam
+    password:
+      from_secret: J@nu@ry2023
+    tags: 
+      - latest
