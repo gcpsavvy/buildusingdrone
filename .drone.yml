@@ -6,7 +6,7 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    registry: hub.docker.com
+    registry: docker.io
     repo: bheemappam/droneinhub
     username:
       from_secret: docker_username
